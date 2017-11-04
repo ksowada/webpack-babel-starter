@@ -1,7 +1,6 @@
 {
   "extends": [
-    "standard",
-    "react-app"
+    "standard"
   ],
   "plugins": [
     "standard",
