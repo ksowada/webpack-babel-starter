@@ -1,6 +1,6 @@
 {
   "name": "webpack-babel-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Webpack and Babel app boilerplate",
   "repository": {
     "type": "git",
