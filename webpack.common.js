@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -39,7 +38,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          { loader: 'style-loader' },
+          { loader: 'style-loader', },
           {
             loader: 'css-loader',
             options: {
@@ -53,7 +52,7 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        test: [ /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, ],
         use: [
           {
             loader: require.resolve('url-loader'),
@@ -66,7 +65,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin(['dist']), new HtmlWebpackPlugin({ template: './src/index.html' })],
+  plugins: [
+    new CleanWebpackPlugin([ 'dist', ]),
+    new HtmlWebpackPlugin({ template: './src/index.html', }),
+  ],
   node: {
     dgram: 'empty',
     fs: 'empty',
